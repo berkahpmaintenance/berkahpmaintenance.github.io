@@ -2,101 +2,705 @@
 <html lang="en-BN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
 <title>Berkah Perdana | Official Store</title>
 <style>
-/* ========== GABUNGAN CSS DARI FILE TXT + STYLE ASLI ========== */
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui,'Segoe UI',Roboto,sans-serif;background:#f5f7fb;color:#1a2c3e;line-height:1.5}.loader-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;z-index:2000;visibility:hidden}.loader-overlay.active{visibility:visible}.loader-spinner{width:50px;height:50px;border:4px solid #c6a43f;border-top-color:#6b1d2e;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
-/* HEADER */
-.header-wrapper{background:#6b1d2e;padding:14px 20px;border-bottom:3px solid #c6a43f}.header-content{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}.header-brand{display:flex;align-items:center;gap:12px}.header-logo img{width:50px;height:50px;object-fit:contain;border-radius:50%}.brand-info{display:flex;flex-direction:column;gap:3px}.brand-name{color:white;font-size:18px;font-weight:700}.brand-badge{background:#c6a43f;color:#6b1d2e;font-size:10px;font-weight:800;padding:2px 8px;border-radius:20px;width:fit-content}.search-bar{display:flex;align-items:center;background:white;border-radius:50px;overflow:hidden;flex:1;max-width:500px;height:42px}.search-bar input{flex:1;border:none;padding:0 14px;font-size:13px;outline:none}.search-bar select{border:none;background:transparent;padding:0 10px;border-left:1px solid #e0e0e0}.search-bar button{background:#c6a43f;border:none;width:44px;cursor:pointer}.search-bar button svg{width:18px;height:18px;stroke:white}.header-icons{display:flex;gap:20px}.header-icon{display:flex;align-items:center;gap:6px;color:white;text-decoration:none;font-size:13px;position:relative}.header-icon svg{width:24px;height:24px;stroke:white;fill:none}.header-icon .badge{position:absolute;top:-6px;right:-8px;background:#c6a43f;color:#6b1d2e;border-radius:50%;width:17px;height:17px;display:flex;align-items:center;justify-content:center;font-size:10px}
-/* SIDEBAR */
-.sidebar-wrapper{width:280px;background:#6b1d2e;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.15)}.sidebar-header{background:#4e1522;padding:12px 16px;display:flex;justify-content:space-between;border-bottom:2px solid #c6a43f}.sidebar-header-title{color:#f5f0e6;font-weight:700}.category-list{background:white;padding:4px 0}.category-item{display:flex;align-items:center;padding:10px 16px;cursor:pointer;border-bottom:1px solid #f0f0f0}.category-item:hover{background:#f9f6f2}.category-icon{width:28px;margin-right:14px}.category-name{flex:1;font-size:.85rem;color:#1a2c3e}.trust-block{background:#4e1522;padding:16px;border-top:2px solid #c6a43f}.trust-item{display:flex;align-items:center;padding:8px 0}.trust-icon{width:36px;height:36px;margin-right:12px;background:rgba(255,255,255,0.08);border-radius:50%;display:flex;align-items:center;justify-content:center}.trust-text strong{color:#f5f0e6;font-size:.75rem;display:block}.trust-text small{color:rgba(255,255,255,0.6);font-size:.65rem}
-/* FOOTER */
-.footer-wrapper{background:#6b1d2e;color:#f5f0e6;padding:40px 24px 20px;border-top:3px solid #c6a43f}.footer-content{max-width:1400px;margin:0 auto}.footer-row{display:flex;flex-wrap:wrap;gap:30px}.footer-item{flex:1;min-width:140px}.footer-brand{display:flex;align-items:center;gap:16px;min-width:280px}.footer-brand-logo{width:60px;height:60px;background:#c6a43f;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:bold;color:#6b1d2e}.footer-brand-text h3{color:#c6a43f;font-size:1.2rem}.footer-brand-text h3 span{background:#c6a43f;color:#6b1d2e;padding:2px 8px;border-radius:12px;font-size:.6rem}.footer-item h4{color:#c6a43f;font-size:.85rem;margin-bottom:16px}.footer-item ul{list-style:none}.footer-item ul li{margin-bottom:8px}.footer-item ul li a{color:#d1d5db;text-decoration:none}.service-box{border:1px solid #c6a43f;border-radius:12px;padding:12px 16px;display:flex;gap:12px;margin-bottom:10px}.service-box svg{width:32px}.social-icons{display:flex;gap:16px;flex-wrap:wrap}.social-icon{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .2s}.social-icon:hover{transform:scale(1.1)}.social-wa{background:#25D366}.social-fb{background:#1877F2}.social-ig{background:#E4405F}.footer-copyright{text-align:center;padding-top:20px;margin-top:20px;border-top:1px solid rgba(255,255,255,0.1);font-size:.7rem}
-/* MAIN CONTENT */
-.main-layout{display:flex;max-width:1400px;margin:2rem auto;padding:0 1.5rem;gap:2rem}.content{flex:1}.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.8rem}.product-card{background:white;border-radius:20px;overflow:hidden;border:1px solid #e2e8f0;transition:transform .2s}.product-card:hover{transform:translateY(-5px);box-shadow:0 12px 28px rgba(107,29,46,0.12);border-color:#c6a43f}.product-card img{width:100%;height:190px;object-fit:cover}.product-info{padding:1rem}.product-title{font-weight:700;color:#6b1d2e}.product-price{font-weight:800;color:#c6a43f;margin:8px 0}.btn-order{background:#6b1d2e;color:white;border:none;padding:8px;border-radius:40px;cursor:pointer;width:100%}.btn-order.wishlisted{background:#2c6e2f}.pagination{display:flex;justify-content:center;gap:8px;margin-top:32px}.page-btn{padding:8px 14px;background:white;border:1px solid #e2e8f0;border-radius:40px;cursor:pointer}.page-btn.active{background:#6b1d2e;color:white}.cart-sidebar{position:fixed;top:0;right:-400px;width:380px;height:100%;background:white;box-shadow:-4px 0 20px rgba(0,0,0,0.15);transition:right .3s;z-index:1000}.cart-sidebar.open{right:0}.cart-header{padding:20px;background:#6b1d2e;color:white;display:flex;justify-content:space-between}.cart-items{flex:1;overflow-y:auto;padding:16px}.cart-footer{padding:20px;border-top:1px solid #e2e8f0}.checkout-link{display:block;background:#6b1d2e;color:white;text-align:center;padding:14px;border-radius:40px;text-decoration:none}.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:999;display:none}.overlay.show{display:block}.toast{position:fixed;bottom:20px;right:20px;background:#6b1d2e;color:white;padding:12px 20px;border-radius:40px;transform:translateX(120%);transition:.3s;z-index:1200}.toast.show{transform:translateX(0)}.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);justify-content:center;align-items:center;z-index:1300}.modal-content{background:white;border-radius:20px;padding:24px;max-width:400px;width:90%}.mobile-menu-btn{display:none;background:none;border:none;cursor:pointer}.mobile-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:999;display:none}.mobile-sidebar{position:fixed;top:0;left:-100%;width:300px;height:100%;z-index:1000;transition:left .3s;background:#6b1d2e;overflow-y:auto}.mobile-sidebar.open{left:0}.mobile-close-btn{position:absolute;top:12px;right:12px;background:none;border:none;color:white;font-size:24px;cursor:pointer}
-@media(max-width:768px){.sidebar-wrapper{display:none}.mobile-menu-btn{display:block}.main-layout{flex-direction:column}.cart-sidebar{width:100%;right:-100%}.header-icon .label{display:none}.search-bar{max-width:200px}}
-@media(min-width:769px){.mobile-menu-btn,.mobile-sidebar,.mobile-overlay{display:none!important}}
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,'Segoe UI',Roboto,sans-serif;background:#f5f7fb;color:#1a2c3e;line-height:1.5}
+img{max-width:100%;display:block}a{text-decoration:none}
+
+/* ======= HEADER ======= */
+.header-wrapper{background:#6b1d2e;padding:14px 20px;border-bottom:3px solid #c6a43f}
+.header-content{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.header-brand{display:flex;align-items:center;gap:12px;flex-shrink:0;cursor:pointer}
+.header-logo img{width:50px;height:50px;object-fit:contain;border-radius:50%}
+.brand-info{display:flex;flex-direction:column;gap:3px}
+.brand-name{color:white;font-size:18px;font-weight:700;line-height:1}
+.brand-badge{display:inline-block;background:#c6a43f;color:#6b1d2e;font-size:10px;font-weight:800;text-transform:uppercase;padding:2px 8px;border-radius:20px;width:fit-content}
+.search-bar{display:flex;align-items:center;background:white;border-radius:50px;overflow:hidden;flex:1;max-width:700px;height:42px}
+.search-bar input{flex:1;border:none;padding:0 14px;font-size:13px;outline:none;height:100%;min-width:0}
+.search-bar select{border:none;background:transparent;padding:0 10px;font-size:12px;outline:none;cursor:pointer;height:100%;border-left:1px solid #e0e0e0;flex-shrink:0}
+.search-bar select.sort-select{min-width:110px}
+.search-bar button{background:#c6a43f;border:none;width:44px;height:100%;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0}
+.search-bar button svg{width:18px;height:18px;stroke:white;fill:none;stroke-width:2}
+.header-icons{display:flex;align-items:center;gap:20px;flex-shrink:0}
+.header-icon{display:flex;align-items:center;gap:6px;color:white;text-decoration:none;font-size:13px;font-weight:500;transition:opacity .2s;position:relative;cursor:pointer}
+.header-icon:hover{opacity:.8}
+.header-icon svg{width:24px;height:24px;stroke:white;fill:none;stroke-width:1.8}
+.header-icon .badge{position:absolute;top:-6px;right:-8px;background:#c6a43f;color:#6b1d2e;font-size:10px;font-weight:bold;border-radius:50%;width:17px;height:17px;display:flex;align-items:center;justify-content:center}
+.header-icon .label{display:inline}
+.hamburger-btn{background:transparent;border:none;cursor:pointer;padding:4px;display:none;align-items:center;justify-content:center}
+.hamburger-btn svg{width:26px;height:26px;stroke:white;stroke-width:2;fill:none;stroke-linecap:round}
+@media(max-width:768px){
+  .header-wrapper{padding:10px 16px}
+  .header-logo img{width:40px;height:40px}
+  .brand-name{font-size:15px}.brand-badge{font-size:9px;padding:1px 7px}
+  .search-bar{height:38px;max-width:100%}
+  .search-bar input{font-size:12px;padding:0 12px}
+  .search-bar select{font-size:11px;padding:0 8px}
+  .search-bar select.sort-select{min-width:90px}
+  .search-bar button{width:40px}
+  .header-icons{gap:14px}
+  .header-icon .label{display:none}
+  .hamburger-btn{display:flex!important}
+}
+@media(max-width:480px){
+  .header-wrapper{padding:8px 12px}.header-content{gap:8px}
+  .header-logo img{width:32px;height:32px}.header-brand{gap:6px}
+  .brand-name{font-size:12px}.brand-badge{font-size:7px;padding:1px 5px}
+  .search-bar{height:30px}
+  .search-bar input{font-size:10px;padding:0 8px}
+  .search-bar select{font-size:9px;padding:0 4px;max-width:70px}
+  .search-bar select.sort-select{min-width:65px}
+  .search-bar button{width:30px}
+  .search-bar button svg{width:12px;height:12px}
+  .header-icons{gap:10px}
+  .header-icon svg{width:18px;height:18px}
+  .header-icon .badge{width:13px;height:13px;font-size:6px;top:-3px;right:-4px}
+}
+
+/* ======= SOCIAL ICONS ======= */
+.social-icons{display:flex;gap:12px;flex-wrap:wrap}
+.social-icon{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .2s}
+.social-icon:hover{transform:scale(1.1)}
+.social-icon svg{width:22px;height:22px;fill:white}
+.social-wa{background:#25D366}.social-fb{background:#1877F2}.social-ig{background:#E4405F}
+.social-tt{background:#000}.social-email{background:#ea4335}.social-LinkedIn{background:#0077B5}
+.social-telegram{background:#0088CC}.social-yt{background:#FF0000}.social-x{background:#000}
+@media(max-width:420px){
+  .social-icons{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 10px;justify-items:center}
+  .social-icon,.social-icon svg{width:50px;height:50px}
+}
+
+/* ======= FOOTER ======= */
+.footer-wrapper{background:#6b1d2e;color:#f5f0e6;padding:40px 24px 20px;border-top:3px solid #c6a43f}
+.footer-content{max-width:1400px;margin:0 auto}
+.footer-row{display:flex;flex-wrap:wrap;gap:30px;align-items:flex-start}
+.footer-item{flex:1;min-width:140px}
+.footer-brand-row{display:flex;align-items:center;gap:16px;min-width:280px}
+.footer-brand-logo{width:60px;height:60px;border-radius:50%;object-fit:contain}
+.footer-brand-text h3{color:#c6a43f;font-size:1.2rem;font-weight:700;margin:0 0 4px}
+.footer-brand-text h3 span{background:#c6a43f;color:#6b1d2e;padding:2px 8px;border-radius:12px;font-size:.6rem;font-weight:700;vertical-align:middle;text-transform:uppercase}
+.footer-brand-text p{font-size:.85rem;color:#d1d5db;margin:0;line-height:1.4}
+.footer-item h4{color:#c6a43f;font-size:.85rem;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px}
+.footer-item ul{list-style:none;padding:0;margin:0}
+.footer-item ul li{margin-bottom:8px;font-size:.8rem}
+.footer-item ul li a{color:#d1d5db;transition:color .2s}
+.footer-item ul li a:hover{color:#c6a43f}
+.service-box{border:1px solid #c6a43f;border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.05);margin-bottom:10px}
+.service-box svg{width:32px;height:32px;flex-shrink:0}
+.service-box-content{display:flex;flex-direction:column}
+.service-box-content strong{font-size:.75rem;color:#f5f0e6}
+.service-box-content span{font-size:.85rem;color:#c6a43f;font-weight:700}
+.service-hours{font-size:.75rem;color:#d1d5db;text-align:center;margin-top:4px}
+.footer-copyright{text-align:center;padding-top:20px;margin-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:.7rem;color:#d1d5db;width:100%}
+@media(min-width:481px)and(max-width:768px){
+  .footer-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+  .footer-item:first-child{grid-column:1/-1;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:16px;margin-bottom:8px}
+  .footer-copyright{grid-column:1/-1}
+}
+@media(max-width:480px){
+  .footer-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .footer-item:first-child{grid-column:1/-1;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:16px;margin-bottom:8px}
+  .footer-brand-logo{width:50px;height:50px}
+  .footer-copyright{grid-column:1/-1}
+  .service-box{flex-direction:column;text-align:center;padding:16px}
+  .social-icon{width:36px;height:36px}
+  .social-icon svg{width:18px;height:18px}
+}
+
+/* ======= SIDEBAR ======= */
+.sidebar-wrapper{width:280px;background:#6b1d2e;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.sidebar-header{background:#4e1522;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #c6a43f}
+.sidebar-header-title{color:#f5f0e6;font-weight:700;font-size:.95rem;letter-spacing:.5px}
+.category-list{background:#fff;padding:4px 0}
+.category-item{display:flex;align-items:center;padding:10px 16px;cursor:pointer;transition:background .15s;border-bottom:1px solid #f0f0f0}
+.category-item:last-child{border-bottom:none}
+.category-item:hover,.category-item.active{background:#fef3e8}
+.category-icon{width:28px;height:28px;flex-shrink:0;margin-right:14px;display:flex;align-items:center;justify-content:center}
+.category-icon svg{width:24px;height:24px;fill:none;stroke:#333;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.category-name{flex:1;font-size:.85rem;color:#1a2c3e;font-weight:500}
+.category-arrow{color:#999;font-size:1rem;margin-left:4px}
+.trust-block{background:#4e1522;padding:16px;border-top:2px solid #c6a43f}
+.trust-item{display:flex;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.trust-item:last-child{border-bottom:none}
+.trust-icon{width:36px;height:36px;flex-shrink:0;margin-right:12px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);border-radius:50%}
+.trust-icon svg{width:20px;height:20px;fill:none;stroke:#c6a43f;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.trust-text{display:flex;flex-direction:column}
+.trust-text strong{color:#f5f0e6;font-size:.75rem;font-weight:700}
+.trust-text small{color:rgba(255,255,255,.6);font-size:.65rem}
+/* Mobile sidebar */
+.mobile-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:999;display:none;opacity:0;transition:opacity .3s}
+.mobile-overlay.active{display:block;opacity:1}
+.mobile-sidebar{position:fixed;top:0;left:-100%;width:300px;height:100%;z-index:1000;transition:left .3s;overflow-y:auto;background:#6b1d2e}
+.mobile-sidebar .sidebar-wrapper{border-radius:0;box-shadow:none;width:100%;min-height:100%}
+.mobile-sidebar.open{left:0}
+.mobile-close-btn{position:absolute;top:12px;right:12px;background:transparent;border:none;color:#f5f0e6;font-size:24px;cursor:pointer;z-index:1001}
+@media(min-width:769px){.hamburger-btn{display:none!important}.mobile-overlay,.mobile-sidebar{display:none!important}}
+@media(max-width:768px){.sidebar-col{display:none!important}}
+
+/* ======= LOADER ======= */
+.loader-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:2000;visibility:hidden;opacity:0;transition:.2s}
+.loader-overlay.active{visibility:visible;opacity:1}
+.loader-spinner{width:50px;height:50px;border:4px solid #c6a43f;border-top-color:#6b1d2e;border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ======= LAYOUT ======= */
+.main-layout{display:flex;max-width:1400px;margin:24px auto;padding:0 24px;gap:24px}
+.sidebar-col{width:280px;flex-shrink:0;align-self:start;position:sticky;top:90px}
+.content{flex:1;min-width:0}
+@media(max-width:768px){.main-layout{flex-direction:column;padding:0 12px;margin:16px auto}}
+
+/* ======= PRODUCTS ======= */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.8rem}
+.product-card{background:white;border-radius:20px;overflow:hidden;border:1px solid #e2e8f0;transition:transform .2s,box-shadow .2s;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.product-card:hover{transform:translateY(-5px);box-shadow:0 12px 28px rgba(107,29,46,.12);border-color:#c6a43f}
+.product-card img{width:100%;height:190px;object-fit:cover;background:#f1f5f9}
+.product-info{padding:1rem}
+.product-title{font-weight:700;font-size:1rem;margin-bottom:.4rem;color:#6b1d2e}
+.product-desc{font-size:.75rem;color:#4a627a;margin-bottom:.5rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.product-price{font-weight:800;color:#c6a43f;margin-bottom:.8rem;font-size:1.1rem}
+.product-actions{display:flex;gap:8px}
+.btn-order{flex:1;text-align:center;padding:8px 10px;font-size:.75rem;font-weight:600;border-radius:40px;cursor:pointer;border:none;background:#6b1d2e;color:white;transition:all .2s}
+.btn-order.wishlisted{background:#2c6e2f}
+.btn-order:hover{background:#8b2a40}
+.btn-order.wishlisted:hover{background:#1f4f21}
+.btn-look{background:#4a627a;color:white;border:none;border-radius:40px;padding:8px 10px;font-size:.75rem;font-weight:600;cursor:pointer;transition:all .2s}
+.btn-look:hover{background:#2c4f6e}
+
+/* ======= PAGINATION ======= */
+.pagination{display:flex;justify-content:center;gap:8px;margin-top:32px;flex-wrap:wrap}
+.page-btn{padding:8px 14px;background:white;border:1px solid #e2e8f0;border-radius:40px;cursor:pointer;font-weight:500;transition:all .2s}
+.page-btn:hover:not(:disabled):not(.active){background:#f5f7fb}
+.page-btn.active{background:#6b1d2e;color:white;border-color:#6b1d2e}
+.page-btn:disabled{opacity:.4;cursor:not-allowed}
+
+/* ======= CART SIDEBAR ======= */
+.cart-sidebar{position:fixed;top:0;right:-400px;width:380px;height:100%;background:white;box-shadow:-4px 0 20px rgba(0,0,0,.15);transition:right .3s;z-index:1050;display:flex;flex-direction:column}
+.cart-sidebar.open{right:0}
+.cart-header{padding:20px;background:#6b1d2e;color:white;display:flex;justify-content:space-between;align-items:center}
+.cart-items{flex:1;overflow-y:auto;padding:16px}
+.cart-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #e2e8f0}
+.cart-item-img{width:60px;height:60px;object-fit:cover;border-radius:12px;background:#f1f5f9;flex-shrink:0}
+.cart-item-info{flex:1;font-size:.85rem}
+.cart-footer{padding:20px;border-top:1px solid #e2e8f0}
+.cart-total-label{font-size:1.1rem;font-weight:bold;margin-bottom:16px;color:#1a2c3e}
+.checkout-link{display:block;width:100%;padding:14px;background:#6b1d2e;color:white;text-align:center;border-radius:40px;font-weight:bold;transition:background .2s}
+.checkout-link:hover{background:#4e1522}
+.cart-qty-btn{background:#6b1d2e;color:white;border:none;width:26px;height:26px;border-radius:6px;cursor:pointer;font-weight:bold;font-size:1rem}
+@media(max-width:768px){.cart-sidebar{width:100%;right:-100%}}
+
+/* ======= OVERLAY / MODAL / TOAST ======= */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:1040;display:none}
+.overlay.show{display:block}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);justify-content:center;align-items:center;z-index:1300}
+.modal.open{display:flex}
+.modal-content{background:white;border-radius:20px;padding:24px;max-width:400px;width:90%;max-height:80vh;overflow:auto}
+.wishlist-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #e2e8f0}
+.toast{position:fixed;bottom:20px;right:20px;background:#6b1d2e;color:white;padding:12px 20px;border-radius:40px;transform:translateX(120%);transition:.3s;z-index:1400;font-size:.85rem}
+.toast.show{transform:translateX(0)}
 </style>
 </head>
 <body>
+
+<!-- LOADER -->
 <div id="loaderOverlay" class="loader-overlay"><div class="loader-spinner"></div></div>
 
-<!-- HEADER -->
+<!-- ===== HEADER ===== -->
 <header class="header-wrapper">
   <div class="header-content">
-    <div class="header-brand">
-      <div class="header-logo"><img src="https://server-enterprise.pages.dev/logo.webp" alt="Berkah Perdana"></div>
-      <div class="brand-info"><span class="brand-name">Berkah Perdana</span><span class="brand-badge">Enterprise</span></div>
+    <div class="header-brand" id="homeLink">
+      <div class="header-logo">
+        <img src="https://server-enterprise.pages.dev/logo.webp" alt="Berkah Perdana" onerror="this.style.display='none'">
+      </div>
+      <div class="brand-info">
+        <span class="brand-name">Berkah Perdana</span>
+        <span class="brand-badge">Enterprise</span>
+      </div>
     </div>
     <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Cari produk...">
-      <select><option>All Categories</option></select>
-      <button id="searchBtn"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <input type="text" id="searchInput" placeholder="Search for products...">
+      
+      <select id="sortSelect" class="sort-select">
+        <option value="price_asc">💰cheap</option>
+        <option value="price_desc">💎pricey</option>
+       
+      
+      </select>
+      <button id="searchBtn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
     </div>
     <div class="header-icons">
-      <a href="#" class="header-icon" id="wishlistIcon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="badge" id="wishlistCount">0</span><span class="label">Wishlist</span></a>
-      <a href="#" class="header-icon" id="cartIcon"><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 2h4l2.7 12.4a2 2 0 0 0 2 1.6h7.5a2 2 0 0 0 2-1.6L22 6H6"/></svg><span class="badge" id="cartCountBadge">0</span><span class="label">Cart</span></a>
+      <a href="#" class="header-icon" id="wishlistIcon">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span class="badge" id="wishlistCount">0</span>
+        <span class="label">Wishlist</span>
+      </a>
+      <a href="#" class="header-icon" id="cartIcon">
+        <svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 2h4l2.7 12.4a2 2 0 0 0 2 1.6h7.5a2 2 0 0 0 2-1.6L22 6H6"/></svg>
+        <span class="badge" id="cartCountBadge">0</span>
+        <span class="label">Cart</span>
+      </a>
+      <button class="hamburger-btn" id="mobileMenuBtn" aria-label="Menu">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
   </div>
 </header>
 
-<button class="mobile-menu-btn" id="mobileMenuBtn"><svg viewBox="0 0 24 24" width="28" height="28" stroke="white" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+<!-- MOBILE OVERLAY + SIDEBAR -->
 <div class="mobile-overlay" id="mobileOverlay"></div>
-<div class="mobile-sidebar" id="mobileSidebar"><button class="mobile-close-btn" id="mobileCloseBtn">✕</button><div id="mobileSidebarContainer"></div></div>
+<div class="mobile-sidebar" id="mobileSidebar">
+  <button class="mobile-close-btn" id="mobileCloseBtn">&#x2715;</button>
+  <div id="mobileSidebarContainer"></div>
+</div>
 
+<!-- MAIN LAYOUT -->
 <div class="main-layout">
-  <aside><div id="desktopSidebarContainer" class="sidebar-wrapper"></div></aside>
+  <aside class="sidebar-col">
+    <div id="desktopSidebarContainer"></div>
+  </aside>
   <div class="content">
     <div id="productGrid" class="product-grid"></div>
     <div id="pagination" class="pagination"></div>
   </div>
 </div>
 
-<div id="cartSidebar" class="cart-sidebar"><div class="cart-header"><h3>Your Cart</h3><button id="closeCartBtn" style="background:none;border:none;color:white;font-size:1.5rem;cursor:pointer">✕</button></div><div id="cartItemsList" class="cart-items"></div><div class="cart-footer"><div class="cart-total">Total: BND <span id="cartTotal">0</span></div><a href="delivery.html" class="checkout-link">✅ Checkout</a></div></div>
+<!-- CART SIDEBAR -->
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <h3>&#x1F6D2; Your Cart</h3>
+    <button id="closeCartBtn" style="background:none;border:none;color:white;font-size:1.5rem;cursor:pointer">&#x2715;</button>
+  </div>
+  <div id="cartItemsList" class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total-label">Total: BND <span id="cartTotal">0.00</span></div>
+    <a href="delivery.html" class="checkout-link">&#x2705; Checkout</a>
+  </div>
+</div>
 <div id="overlay" class="overlay"></div>
-<div id="wishlistModal" class="modal"><div class="modal-content"><h3>❤️ Wishlist</h3><div id="wishlistItemsList"></div><button id="closeWishlistModal" style="margin-top:16px;padding:10px;background:#6b1d2e;color:white;border:none;border-radius:40px;width:100%">Tutup</button></div></div>
+
+<!-- WISHLIST MODAL -->
+<div id="wishlistModal" class="modal">
+  <div class="modal-content">
+    <h3 style="color:#6b1d2e;margin-bottom:16px">&#x2764;&#xFE0F; Wishlist</h3>
+    <div id="wishlistItemsList"></div>
+    <button id="closeWishlistModal" style="margin-top:16px;padding:10px;background:#6b1d2e;color:white;border:none;border-radius:40px;width:100%;cursor:pointer;font-size:1rem">Tutup</button>
+  </div>
+</div>
+
 <div id="toast" class="toast"></div>
 
-<footer class="footer-wrapper"><div class="footer-content"><div class="footer-row"><div class="footer-item footer-brand"><div class="footer-brand-logo">B</div><div class="footer-brand-text"><h3>BERKAH PERDANA <span>ENTERPRISE</span></h3><p>Your trusted home appliances store</p></div></div><div class="footer-item"><h4>INFORMATION</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Terms</a></li><li><a href="#">Privacy</a></li></ul></div><div class="footer-item"><h4>CUSTOMER SERVICE</h4><ul><li><a href="#">Contact</a></li><li><a href="#">Shipping</a></li><li><a href="#">Warranty</a></li></ul></div><div class="footer-item"><h4>PERKHIDMATAN</h4><div class="service-box"><svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg><div class="service-box-content"><strong>WA / CALL FOR SERVICE</strong><span>+673 123 4567</span></div></div><div class="service-hours">Mon-Sun: 8am-8pm</div></div><div class="footer-item"><h4>IKUTI KAMI</h4><div class="social-icons"><a href="#" class="social-icon social-fb"><svg viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a><a href="#" class="social-icon social-ig"><svg viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/></svg></a><a href="#" class="social-icon social-wa"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></a></div></div><div class="footer-copyright">© 2025 Berkah Perdana Enterprise. All Rights Reserved.</div></div></div></footer>
+<!-- ===== FOOTER ===== -->
+<footer class="footer-wrapper">
+  <div class="footer-content">
+    <div class="footer-row">
+
+      <!-- Brand -->
+      <div class="footer-item" style="min-width:280px">
+        <div class="footer-brand-row">
+          <img class="footer-brand-logo" src="https://server-enterprise.pages.dev/logo.webp" alt="Berkah Perdana" onerror="this.style.display='none'">
+          <div class="footer-brand-text">
+            <h3>BERKAH PERDANA <span>ENTERPRISE</span></h3>
+            <p>Your trusted home appliances store<br>with quality products and excellent service.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Information -->
+      <div class="footer-item">
+        <h4>INFORMATION</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Return &amp; Refund</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Service -->
+      <div class="footer-item">
+        <h4>CUSTOMER SERVICE</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Shipping Information</a></li>
+          <li><a href="#">Track Your Order</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Support Center</a></li>
+        </ul>
+      </div>
+
+      <!-- Perkhidmatan -->
+      <div class="footer-item">
+        <h4>PERKHIDMATAN</h4>
+        <div class="service-box">
+          <svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <div class="service-box-content">
+            <strong>WA / CALL FOR SERVICE</strong>
+            <strong>&amp; INSTALLATION</strong>
+            <span>+673 836 3366</span>
+          </div>
+        </div>
+        <div class="service-hours">Monday - Sunday<br>8:00 AM - 8:00 PM</div>
+      </div>
+
+      <!-- Ikuti Kami -->
+      <div class="footer-item">
+        <h4>IKUTI KAMI</h4>
+        <div class="social-icons">
+          <a href="https://www.tiktok.com/@berkahperdana" target="_blank" rel="noopener" class="social-icon social-tt" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="white"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.187V2h-3.193v13.766c0 1.57-1.272 2.842-2.842 2.842a2.842 2.842 0 0 1 0-5.684c.307 0 .603.049.881.139V9.808a6.036 6.036 0 0 0-.881-.065A6.036 6.036 0 0 0 3.75 15.78a6.036 6.036 0 0 0 6.034 6.034 6.036 6.036 0 0 0 6.035-6.034V8.792a7.956 7.956 0 0 0 4.431 1.344V6.943a4.79 4.79 0 0 1-.661-.257z"/></svg>
+          </a>
+          <a href="mailto:berkahperdana@gmail.com" class="social-icon social-email" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="white"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+          </a>
+          <a href="https://wa.me/6738363366" target="_blank" rel="noopener" class="social-icon social-wa" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="https://facebook.com/berkahperdana" target="_blank" rel="noopener" class="social-icon social-fb" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://instagram.com/berkahperdana" target="_blank" rel="noopener" class="social-icon social-ig" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://t.me/berkahperdana" target="_blank" rel="noopener" class="social-icon social-telegram" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" fill="white"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </a>
+          <a href="https://youtube.com/@berkahperdana" target="_blank" rel="noopener" class="social-icon social-yt" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-copyright">&copy; 2026 Berkah Perdana Enterprise. All Rights Reserved.</div>
+    </div>
+  </div>
+</footer>
 
 <script>
-const PROD_WORKER='https://debianserver.berkahperdana.workers.dev/__api';
-let allProducts=[],filteredProducts=[],currentPage=1,perPage=12,totalPages=1,currentCategory='all',currentSearch='';
-let cart=JSON.parse(localStorage.getItem('voidsync_cart')||'[]');
-let wishlist=JSON.parse(localStorage.getItem('berkah_wishlist')||'[]');
-function escapeHtml(e){return String(e||'').replace(/[&<>]/g,(e=>'&'===e?'&amp;':'<'===e?'&lt;':'&gt;'===e?'&gt;':e))}
-function showToast(e,t=!1){const o=document.getElementById('toast');o.textContent=e,o.style.background=t?'#dc2626':'#6b1d2e',o.classList.add('show'),setTimeout(()=>o.classList.remove('show'),3e3)}
-function showLoader(e){document.getElementById('loaderOverlay').classList.toggle('active',e)}
-async function fetchWorker(e,t,o={}){const n=await fetch(e+t,o);if(!n.ok)throw new Error('Worker failed');return n.json()}
-async function loadProducts(){showLoader(!0);try{const e=(await fetchWorker(PROD_WORKER,'?page=1&limit=1e4')).products||[];allProducts=e,renderSidebarCategories(),applyFilters(),showToast(`✅ ${allProducts.length} products loaded`)}catch(e){showToast('❌ Failed to load products',!0),allProducts=[],applyFilters()}finally{showLoader(!1)}}
-function renderSidebarCategories(){const e=[...new Set(allProducts.map(e=>e.category).filter(Boolean))];const t=e=>{if(!e)return;let o=`<div class="sidebar-wrapper"><div class="sidebar-header"><span class="sidebar-header-title">📂 ALL CATEGORIES</span></div><div class="category-list">`;e.forEach(e=>{o+=`<div class="category-item" data-category="${escapeHtml(e)}"><div class="category-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333"><rect x="4" y="4" width="16" height="16" rx="2"/></svg></div><span class="category-name">${escapeHtml(e)}</span><span class="category-arrow">›</span></div>`}),o+=`</div><div class="trust-block"><div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><div class="trust-text"><strong>100% ORIGINAL</strong><small>Genuine Products</small></div></div></div></div>`,e.innerHTML=o,e.querySelectorAll('.category-item').forEach(o=>{o.addEventListener('click',()=>{currentCategory=o.dataset.category,currentPage=1,applyFilters(),closeMobileSidebar()})})};t(document.getElementById('desktopSidebarContainer')),t(document.getElementById('mobileSidebarContainer'))}
-function closeMobileSidebar(){document.getElementById('mobileSidebar')?.classList.remove('open'),document.getElementById('mobileOverlay')?.classList.remove('active'),document.body.style.overflow=''}
-function applyFilters(){let e=[...allProducts];currentSearch&&(e=e.filter(e=>(e.name||'').toLowerCase().includes(currentSearch)||(e.code||'').toLowerCase().includes(currentSearch))),'all'!==currentCategory&&(e=e.filter(e=>(e.category||'').toLowerCase()===currentCategory.toLowerCase())),filteredProducts=e,totalPages=Math.ceil(filteredProducts.length/perPage),currentPage=Math.min(currentPage,totalPages||1),renderProducts(),renderPagination()}
-function renderProducts(){const e=(currentPage-1)*perPage,t=filteredProducts.slice(e,e+perPage),o=document.getElementById('productGrid');if(!t.length){o.innerHTML='<div style="text-align:center;padding:60px;">📭 No products</div>';return}o.innerHTML=t.map(e=>{const t=wishlist.some(t=>t.code===e.code);return`<div class="product-card"><img src="${escapeHtml(e.imageUrl||'https://placehold.co/280x180?text=No+Image')}" onerror="this.src='https://placehold.co/280x180?text=No+Image'"><div class="product-info"><div class="product-title">${escapeHtml(e.name||'No name')}</div><div class="product-price">BND ${(e.price||0).toFixed(2)}</div><button class="btn-order ${t?'wishlisted':''}" data-code="${escapeHtml(e.code)}" data-name="${escapeHtml(e.name)}" data-price="${e.price||0}" data-image="${escapeHtml(e.imageUrl||'')}">${t?'❤️ Wishlisted':'🛒 Order Now'}</button></div></div>`}).join(''),document.querySelectorAll('.btn-order').forEach(e=>{e.addEventListener('click',(t=>{t.preventDefault();const o={code:e.dataset.code,name:e.dataset.name,price:parseFloat(e.dataset.price),imageUrl:e.dataset.image};toggleWishlist(o);const n=wishlist.some(e=>e.code===o.code);e.textContent=n?'❤️ Wishlisted':'🛒 Order Now',n?e.classList.add('wishlisted'):e.classList.remove('wishlisted')}))})}
-function renderPagination(){const e=document.getElementById('pagination');if(totalPages<=1){e.innerHTML='';return}let t=`<button class="page-btn" data-page="prev" ${1===currentPage?'disabled':''}>◀ Prev</button>`;for(let e=Math.max(1,currentPage-2);e<=Math.min(totalPages,currentPage+2);e++)t+=`<button class="page-btn ${e===currentPage?'active':''}" data-page="${e}">${e}</button>`;t+=`<button class="page-btn" data-page="next" ${currentPage===totalPages?'disabled':''}>Next ▶</button>`,e.innerHTML=t,document.querySelectorAll('.page-btn').forEach(e=>{e.disabled||(e.onclick=(()=>{let t=e.dataset.page;'prev'===t?currentPage--:'next'===t?currentPage++:currentPage=parseInt(t),currentPage<1&&(currentPage=1),currentPage>totalPages&&(currentPage=totalPages),renderProducts(),renderPagination(),window.scrollTo(0,0)}))})}
-function updateWishlistUI(){document.getElementById('wishlistCount').innerText=wishlist.length}
-function saveWishlist(){localStorage.setItem('berkah_wishlist',JSON.stringify(wishlist)),updateWishlistUI()}
-function toggleWishlist(e){wishlist.some(t=>t.code===e.code)?(wishlist=wishlist.filter(t=>t.code!==e.code),showToast(`❌ ${e.name} removed`)):(wishlist.push({...e}),showToast(`❤️ ${e.name} added`)),saveWishlist()}
-function saveCart(){localStorage.setItem('voidsync_cart',JSON.stringify(cart)),updateCartUI()}
-function updateCartUI(){let e=cart.reduce((e,t)=>e+(t.quantity||1),0);document.getElementById('cartCountBadge').innerText=e;let t=document.getElementById('cartItemsList');if(!cart.length){t.innerHTML='<div style="text-align:center;padding:40px;">Cart empty</div>',document.getElementById('cartTotal').innerText='0';return}let o=0;t.innerHTML=cart.map((e,t)=>{let n=(e.price||0)*(e.quantity||1);return o+=n,`<div class="cart-item"><img class="cart-item-img" src="${escapeHtml(e.imageUrl||'https://placehold.co/60x60')}" style="width:50px;height:50px;object-fit:cover;border-radius:8px"><div><strong>${escapeHtml(e.code)}</strong><br>${escapeHtml((e.name||'').substring(0,30))}<br>BND ${(e.price||0).toFixed(2)}</div><div><button class="cart-qty-btn" data-idx="${t}" data-delta="-1">-</button><span style="margin:0 10px">${e.quantity||1}</span><button class="cart-qty-btn" data-idx="${t}" data-delta="1">+</button><button style="background:#ef4444;margin-left:10px;border:none;color:white;padding:4px 8px;border-radius:8px;cursor:pointer" onclick="removeFromCart(${t})">Hapus</button></div></div>`}).join(''),document.getElementById('cartTotal').innerText=o.toFixed(2),document.querySelectorAll('.cart-qty-btn').forEach(e=>{e.addEventListener('click',(t=>{let o=parseInt(e.dataset.idx),n=parseInt(e.dataset.delta);let l=(cart[o].quantity||1)+n;l<1&&(l=1),cart[o].quantity=l,saveCart()}))})}
-function removeFromCart(e){cart.splice(e,1),saveCart(),cart.length||document.getElementById('cartSidebar').classList.remove('open')}
-function showWishlistModal(){const e=document.getElementById('wishlistItemsList');e.innerHTML=wishlist.length?wishlist.map(e=>`<div class="wishlist-item"><span>${escapeHtml(e.name)}</span><button onclick="toggleWishlist({code:'${e.code}',name:'${escapeHtml(e.name)}',price:${e.price}});this.parentElement.remove();if(!wishlist.length)document.getElementById('wishlistModal').style.display='none'" style="background:#dc2626;color:white;border:none;padding:4px 12px;border-radius:40px">Hapus</button></div>`).join(''):'<div style="text-align:center;padding:20px">Wishlist kosong</div>',document.getElementById('wishlistModal').style.display='flex'}
-document.getElementById('mobileMenuBtn')?.addEventListener('click',()=>{document.getElementById('mobileSidebar').classList.add('open'),document.getElementById('mobileOverlay').classList.add('active'),document.body.style.overflow='hidden'});
-document.getElementById('mobileCloseBtn')?.addEventListener('click',closeMobileSidebar);
-document.getElementById('mobileOverlay')?.addEventListener('click',closeMobileSidebar);
-document.getElementById('searchInput')?.addEventListener('keypress',e=>{if(e.key==='Enter'){currentSearch=e.target.value.toLowerCase();currentPage=1;applyFilters()}});
-document.getElementById('searchBtn')?.addEventListener('click',()=>{currentSearch=document.getElementById('searchInput').value.toLowerCase();currentPage=1;applyFilters()});
-document.getElementById('cartIcon')?.addEventListener('click',()=>{document.getElementById('cartSidebar').classList.add('open'),document.getElementById('overlay').classList.add('show')});
-document.getElementById('closeCartBtn')?.addEventListener('click',()=>{document.getElementById('cartSidebar').classList.remove('open'),document.getElementById('overlay').classList.remove('show')});
-document.getElementById('overlay')?.addEventListener('click',()=>{document.getElementById('cartSidebar').classList.remove('open'),document.getElementById('overlay').classList.remove('show')});
-document.getElementById('wishlistIcon')?.addEventListener('click',showWishlistModal);
-document.getElementById('closeWishlistModal')?.addEventListener('click',()=>document.getElementById('wishlistModal').style.display='none');
-window.removeFromCart=removeFromCart;
-window.toggleWishlist=toggleWishlist;
-loadProducts();
-updateCartUI();
-updateWishlistUI();
+(function(){
+  const WORKER='https://debianserver.berkahperdana.workers.dev/__api';
+  let allProducts=[],filteredProducts=[],currentPage=1,perPage=12,totalPages=1,
+      currentCategory='all',currentSearch='',currentSort='price_asc',
+      cart=JSON.parse(localStorage.getItem('voidsync_cart')||'[]'),
+      wishlist=JSON.parse(localStorage.getItem('berkah_wishlist')||'[]');
+
+  function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+  function toast(msg,err){
+    const t=document.getElementById('toast');
+    t.textContent=msg;t.style.background=err?'#dc2626':'#6b1d2e';
+    t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000);
+  }
+  function loader(on){document.getElementById('loaderOverlay').classList.toggle('active',on)}
+
+  /* === SORT FUNCTION === */
+  function sortProducts(products){
+    const sorted=[...products];
+    switch(currentSort){
+      case 'price_asc': sorted.sort((a,b)=>(a.price||0)-(b.price||0)); break;
+      case 'price_desc': sorted.sort((a,b)=>(b.price||0)-(a.price||0)); break;
+      case 'name_asc': sorted.sort((a,b)=>(a.name||'').localeCompare(b.name||'')); break;
+      case 'name_desc': sorted.sort((a,b)=>(b.name||'').localeCompare(a.name||'')); break;
+      default: break;
+    }
+    return sorted;
+  }
+
+  /* === LOAD === */
+  async function loadProducts(){
+    loader(true);
+    try{
+      const r=await fetch(WORKER+'?page=1&limit=10000');
+      if(!r.ok)throw 0;
+      const d=await r.json();
+      allProducts=d.products||[];
+      renderSidebars();
+      populateSelect();
+      applyFilters();
+      toast('&#x2705; '+allProducts.length+' products loaded');
+    }catch(e){toast('&#x274C; Failed to load products',true);allProducts=[];applyFilters();}
+    finally{loader(false)}
+  }
+
+  /* === SIDEBAR STATIS 10 KATEGORI === */
+  const staticCategories = [
+    'Aircond', 'Washer', 'Cooker', 'Iron', 'Sound',
+    'Refrigerator', 'Television', 'Fan', 'Vacuum Cleaner', 'Water Heater'
+  ];
+
+  const svgIcons = {
+    aircond: `<svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M8 12h8"/><path d="M12 12v6"/><path d="M9 18l-4 3"/><path d="M15 18l4 3"/></svg>`,
+    washer: `<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M8 8h.01"/><path d="M16 8h.01"/></svg>`,
+    cooker: `<svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="6" cy="12" r="1"/><circle cx="10" cy="12" r="1"/><circle cx="14" cy="12" r="1"/><circle cx="18" cy="12" r="1"/><line x1="6" y1="18" x2="18" y2="18"/></svg>`,
+    iron: `<svg viewBox="0 0 24 24"><path d="M3 18h18v-3a4 4 0 0 0-4-4h-7a4 4 0 0 0-4 4v3"/><path d="M9 18v-2"/><line x1="12" y1="14" x2="12" y2="18"/></svg>`,
+    sound: `<svg viewBox="0 0 24 24"><path d="M15.5 6.5a5 5 0 0 1 0 11"/><path d="M18.5 3.5a9 9 0 0 1 0 17"/><path d="M8 8l-4 4 4 4"/><path d="M12 6v12"/></svg>`,
+    refrigerator: `<svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="4" y1="13" x2="20" y2="13"/><line x1="4" y1="18" x2="20" y2="18"/><line x1="10" y1="9" x2="10" y2="11"/></svg>`,
+    television: `<svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="12" rx="1"/><line x1="8" y1="16" x2="16" y2="16"/><line x1="12" y1="16" x2="12" y2="20"/></svg>`,
+    fan: `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3"/><path d="M12 18v3"/><path d="M3 12h3"/><path d="M18 12h3"/><path d="M7.5 7.5l2.12 2.12"/><path d="M14.38 14.38l2.12 2.12"/><path d="M16.5 7.5l-2.12 2.12"/><path d="M9.62 14.38l-2.12 2.12"/></svg>`,
+    vacuum: `<svg viewBox="0 0 24 24"><rect x="4" y="8" width="6" height="12" rx="1"/><rect x="14" y="12" width="6" height="8" rx="1"/><line x1="10" y1="12" x2="14" y2="12"/><line x1="10" y1="16" x2="14" y2="16"/><circle cx="17" cy="20" r="2"/><circle cx="7" cy="20" r="2"/><line x1="8" y1="8" x2="6" y2="4"/></svg>`,
+    waterheater: `<svg viewBox="0 0 24 24"><path d="M12 2v4"/><path d="M9 6h6"/><path d="M12 22a8 8 0 0 0 8-8V6a4 4 0 0 0-8 0v8a4 4 0 0 0-8 0v8"/><circle cx="12" cy="6" r="3"/></svg>`
+  };
+
+  function getIconForCategory(cat){
+    const map={Aircond:'aircond',Washer:'washer',Cooker:'cooker',Iron:'iron',Sound:'sound',Refrigerator:'refrigerator',Television:'television',Fan:'fan','Vacuum Cleaner':'vacuum','Water Heater':'waterheater'};
+    return svgIcons[map[cat]] || svgIcons.aircond;
+  }
+
+  function sidebarHTML(){
+    const items = staticCategories.map(cat => `
+      <div class="category-item" data-cat="${esc(cat)}">
+        <div class="category-icon">${getIconForCategory(cat)}</div>
+        <span class="category-name">${esc(cat)}</span>
+        <span class="category-arrow">&#x203A;</span>
+      </div>`).join('');
+    return`<div class="sidebar-wrapper">
+      <div class="sidebar-header"><span class="sidebar-header-title">&#x1F4C2; ALL CATEGORIES</span></div>
+      <div class="category-list">${items}</div>
+      <div class="trust-block">
+        <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="trust-text"><strong>Secure Shopping</strong><small>100% Protected</small></div></div>
+        <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="trust-text"><strong>Fast Delivery</strong><small>Brunei Wide</small></div></div>
+        <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div class="trust-text"><strong>Secure Payment</strong><small>Safe Transaction</small></div></div>
+        <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16a2 2 0 0 1 .27.92z"/></svg></div><div class="trust-text"><strong>24/7 Support</strong><small>Customer Service</small></div></div>
+      </div>
+    </div>`;
+  }
+
+  function renderSidebars(){
+    const html=sidebarHTML();
+    const d=document.getElementById('desktopSidebarContainer');
+    const m=document.getElementById('mobileSidebarContainer');
+    if(d){d.innerHTML=html;bindCats(d,false)}
+    if(m){m.innerHTML=html;bindCats(m,true)}
+  }
+
+  function bindCats(container,isMobile){
+    container.querySelectorAll('.category-item').forEach(el=>{
+      el.addEventListener('click',()=>{
+        currentCategory=el.dataset.cat;currentPage=1;applyFilters();
+        container.querySelectorAll('.category-item').forEach(e=>e.classList.remove('active'));
+        el.classList.add('active');
+        if(isMobile)closeMobile();
+      });
+    });
+  }
+
+  function populateSelect(){
+    const sel=document.getElementById('categorySelect');if(!sel)return;
+    sel.innerHTML='<option value="all">All Az</option>'+staticCategories.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
+    sel.onchange=()=>{currentCategory=sel.value;currentPage=1;applyFilters()};
+  }
+
+  /* === MOBILE SIDEBAR === */
+  function openMobile(){
+    document.getElementById('mobileSidebar').classList.add('open');
+    document.getElementById('mobileOverlay').classList.add('active');
+  }
+  function closeMobile(){
+    document.getElementById('mobileSidebar').classList.remove('open');
+    document.getElementById('mobileOverlay').classList.remove('active');
+  }
+
+  /* === FILTER + SORT + RENDER === */
+  function applyFilters(){
+    let p=[...allProducts];
+    if(currentSearch)p=p.filter(x=>(x.name||'').toLowerCase().includes(currentSearch)||(x.code||'').toLowerCase().includes(currentSearch));
+    if(currentCategory!=='all')p=p.filter(x=>(x.category||'').toLowerCase()===currentCategory.toLowerCase());
+    filteredProducts=sortProducts(p);
+    totalPages=Math.ceil(filteredProducts.length/perPage)||1;
+    currentPage=Math.min(currentPage,totalPages);
+    renderProducts();renderPagination();
+  }
+
+  function openLookDescription(code){
+    const product=allProducts.find(p=>p.code===code);
+    if(product && product.url){
+      window.open(product.url, '_blank');
+    }else{
+      toast('🔍 No description URL available for this product', true);
+    }
+  }
+
+  function renderProducts(){
+    const pg=filteredProducts.slice((currentPage-1)*perPage,currentPage*perPage);
+    const g=document.getElementById('productGrid');
+    if(!pg.length){g.innerHTML='<div style="text-align:center;padding:60px;color:#6c757d">&#x1F4ED; No products found</div>';return}
+    g.innerHTML=pg.map(p=>{
+      const inW=wishlist.some(w=>w.code===p.code);
+      return`<div class="product-card">
+        <img src="${esc(p.imageUrl||'https://placehold.co/280x180?text=Image+404%0A[Stay+Tuned]%0A!Product+Exists%0AIn+Our+Place%0AETC')}" onerror="this.src='https://placehold.co/280x180?text=Image+404%0A[Stay+Tuned]%0A!Product+Exists%0AIn+Our+Place%0AETC'" loading="lazy">
+        <div class="product-info">
+          <div class="product-title">${esc(p.name||'No name')}</div>
+          <div class="product-desc">${esc(p.code||'')}</div>
+          <div class="product-price">BND ${(p.price||0).toFixed(2)}</div>
+          <div class="product-actions">
+            <button class="btn-look" data-code="${esc(p.code)}">📄 Look Description</button>
+            <button class="btn-order${inW?' wishlisted':''}"
+              data-code="${esc(p.code)}" data-name="${esc(p.name)}"
+              data-price="${p.price||0}" data-img="${esc(p.imageUrl||'')}">
+              ${inW?'&#x2764;&#xFE0F; Wishlisted':'&#x1F6D2; Order Now'}
+            </button>
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+    g.querySelectorAll('.btn-look').forEach(btn=>{
+      btn.onclick=()=>openLookDescription(btn.dataset.code);
+    });
+    g.querySelectorAll('.btn-order').forEach(btn=>{
+      btn.onclick=()=>{
+        const item={code:btn.dataset.code,name:btn.dataset.name,price:parseFloat(btn.dataset.price),imageUrl:btn.dataset.img};
+        toggleWishlist(item);
+        const inW=wishlist.some(w=>w.code===item.code);
+        btn.innerHTML=inW?'&#x2764;&#xFE0F; Wishlisted':'&#x1F6D2; Order Now';
+        inW?btn.classList.add('wishlisted'):btn.classList.remove('wishlisted');
+      };
+    });
+  }
+
+  function renderPagination(){
+    const el=document.getElementById('pagination');
+    if(totalPages<=1){el.innerHTML='';return}
+    let h=`<button class="page-btn" data-p="prev"${currentPage===1?' disabled':''}>&#x25C0; Prev</button>`;
+    for(let i=Math.max(1,currentPage-2);i<=Math.min(totalPages,currentPage+2);i++)
+      h+=`<button class="page-btn${i===currentPage?' active':''}" data-p="${i}">${i}</button>`;
+    h+=`<button class="page-btn" data-p="next"${currentPage===totalPages?' disabled':''}>Next &#x25B6;</button>`;
+    el.innerHTML=h;
+    el.querySelectorAll('.page-btn:not([disabled])').forEach(b=>{
+      b.onclick=()=>{
+        const v=b.dataset.p;
+        if(v==='prev')currentPage--;else if(v==='next')currentPage++;else currentPage=+v;
+        currentPage=Math.max(1,Math.min(totalPages,currentPage));
+        renderProducts();renderPagination();window.scrollTo(0,0);
+      };
+    });
+  }
+
+  /* === WISHLIST === */
+  function toggleWishlist(item){
+    if(wishlist.some(w=>w.code===item.code)){
+      wishlist=wishlist.filter(w=>w.code!==item.code);
+      toast('&#x274C; '+item.name+' removed from wishlist');
+    }else{
+      wishlist.push({...item});
+      toast('&#x2764;&#xFE0F; '+item.name+' added to wishlist');
+    }
+    localStorage.setItem('berkah_wishlist',JSON.stringify(wishlist));
+    document.getElementById('wishlistCount').innerText=wishlist.length;
+  }
+  window._wlToggle=toggleWishlist;
+
+  function showWishlistModal(){
+    const el=document.getElementById('wishlistItemsList');
+    el.innerHTML=wishlist.length
+      ?wishlist.map(w=>`<div class="wishlist-item">
+          <span>${esc(w.name)}</span>
+          <button onclick="window._wlToggle({code:'${esc(w.code)}',name:'${esc(w.name)}',price:${w.price||0}});this.closest('.wishlist-item').remove()"
+            style="background:#dc2626;color:white;border:none;padding:4px 12px;border-radius:40px;cursor:pointer">Hapus</button>
+        </div>`).join('')
+      :'<div style="text-align:center;padding:20px;color:#6c757d">Wishlist kosong</div>';
+    document.getElementById('wishlistModal').classList.add('open');
+  }
+
+  /* === CART === */
+  function saveCart(){localStorage.setItem('voidsync_cart',JSON.stringify(cart))}
+
+  function updateCartUI(){
+    const count=cart.reduce((s,i)=>s+(i.quantity||1),0);
+    document.getElementById('cartCountBadge').innerText=count;
+    const list=document.getElementById('cartItemsList');if(!list)return;
+    if(!cart.length){
+      list.innerHTML='<div style="text-align:center;padding:40px;color:#6c757d">&#x1F6D2; Cart empty</div>';
+      document.getElementById('cartTotal').innerText='0.00';return;
+    }
+    let total=0;
+    list.innerHTML=cart.map((item,i)=>{
+      const sub=(item.price||0)*(item.quantity||1);total+=sub;
+      return`<div class="cart-item">
+        <img class="cart-item-img" src="${esc(item.imageUrl||'https://placehold.co/60x60')}" onerror="this.src='https://placehold.co/60x60'">
+        <div class="cart-item-info">
+          <div><strong>${esc(item.code)}</strong></div>
+          <div style="font-size:.8rem;color:#4a627a">${esc((item.name||'').substring(0,40))}</div>
+          <div style="color:#c6a43f;font-weight:700">BND ${(item.price||0).toFixed(2)}</div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:6px">
+            <button class="cart-qty-btn" data-i="${i}" data-d="-1">&#x2212;</button>
+            <span style="font-weight:bold">${item.quantity||1}</span>
+            <button class="cart-qty-btn" data-i="${i}" data-d="1">+</button>
+          </div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div style="font-weight:bold;color:#6b1d2e">BND ${sub.toFixed(2)}</div>
+          <button onclick="removeFromCart(${i})" style="background:#ef4444;color:white;border:none;padding:4px 10px;border-radius:8px;cursor:pointer;margin-top:6px;font-size:.75rem">&#x1F5D1;</button>
+        </div>
+      </div>`;
+    }).join('');
+    document.getElementById('cartTotal').innerText=total.toFixed(2);
+    list.querySelectorAll('.cart-qty-btn').forEach(b=>{
+      b.onclick=()=>{
+        const idx=+b.dataset.i,delta=+b.dataset.d;
+        cart[idx].quantity=Math.max(1,(cart[idx].quantity||1)+delta);
+        saveCart();updateCartUI();
+      };
+    });
+  }
+
+  function removeFromCart(idx){
+    cart.splice(idx,1);saveCart();updateCartUI();
+    if(!cart.length){
+      document.getElementById('cartSidebar').classList.remove('open');
+      document.getElementById('overlay').classList.remove('show');
+    }
+  }
+  window.removeFromCart=removeFromCart;
+
+  /* === INIT === */
+  function init(){
+    loadProducts();
+    updateCartUI();
+    document.getElementById('wishlistCount').innerText=wishlist.length;
+
+    // Sorting change
+    document.getElementById('sortSelect').onchange=()=>{
+      currentSort=document.getElementById('sortSelect').value;
+      currentPage=1;
+      applyFilters();
+    };
+
+    // Cart open/close
+    document.getElementById('cartIcon').onclick=e=>{e.preventDefault();document.getElementById('cartSidebar').classList.add('open');document.getElementById('overlay').classList.add('show')};
+    document.getElementById('closeCartBtn').onclick=()=>{document.getElementById('cartSidebar').classList.remove('open');document.getElementById('overlay').classList.remove('show')};
+    document.getElementById('overlay').onclick=()=>{document.getElementById('cartSidebar').classList.remove('open');document.getElementById('overlay').classList.remove('show')};
+
+    // Wishlist
+    document.getElementById('wishlistIcon').onclick=e=>{e.preventDefault();showWishlistModal()};
+    document.getElementById('closeWishlistModal').onclick=()=>document.getElementById('wishlistModal').classList.remove('open');
+    document.getElementById('wishlistModal').onclick=e=>{if(e.target.id==='wishlistModal')document.getElementById('wishlistModal').classList.remove('open')};
+
+    // Mobile sidebar
+    document.getElementById('mobileMenuBtn').onclick=openMobile;
+    document.getElementById('mobileCloseBtn').onclick=closeMobile;
+    document.getElementById('mobileOverlay').onclick=closeMobile;
+
+    // Search
+    const inp=document.getElementById('searchInput');
+    function doSearch(){currentSearch=inp.value.trim().toLowerCase();currentPage=1;applyFilters()}
+    inp.addEventListener('keypress',e=>{if(e.key==='Enter')doSearch()});
+    document.getElementById('searchBtn').onclick=doSearch;
+
+    // Logo = home
+    document.getElementById('homeLink').onclick=()=>{
+      inp.value='';currentSearch='';currentCategory='all';currentPage=1;
+      document.getElementById('sortSelect').value='price_asc';currentSort='price_asc';
+      const sel=document.getElementById('categorySelect');if(sel)sel.value='all';
+      applyFilters();
+      document.querySelectorAll('.category-item').forEach(e=>e.classList.remove('active'));
+    };
+  }
+
+  init();
+})();
 </script>
 </body>
 </html>
