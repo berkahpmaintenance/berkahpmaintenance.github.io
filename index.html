@@ -277,7 +277,7 @@ img{max-width:100%;display:block}a{text-decoration:none}
   <div id="cartItemsList" class="cart-items"></div>
   <div class="cart-footer">
     <div class="cart-total-label">Total: BND <span id="cartTotal">0.00</span></div>
-    <a href="delivery.html" class="checkout-link">&#x2705; Checkout</a>
+    <a href="delivery.html" class="checkout-link">✅ Checkout</a>
   </div>
 </div>
 <div id="overlay" class="overlay"></div>
@@ -285,7 +285,7 @@ img{max-width:100%;display:block}a{text-decoration:none}
 <!-- WISHLIST MODAL -->
 <div id="wishlistModal" class="modal">
   <div class="modal-content">
-    <h3 style="color:#6b1d2e;margin-bottom:16px">&#x2764;&#xFE0F; Wishlist</h3>
+    <h3 style="color:#6b1d2e;margin-bottom:16px">♥️ Wishlist</h3>
     <div id="wishlistItemsList"></div>
     <button id="closeWishlistModal" style="margin-top:16px;padding:10px;background:#6b1d2e;color:white;border:none;border-radius:40px;width:100%;cursor:pointer;font-size:1rem">Tutup</button>
   </div>
@@ -409,7 +409,7 @@ img{max-width:100%;display:block}a{text-decoration:none}
     return sorted;
   }
 
-  /* === LOAD === */
+  /* === for products jumlah LOAD === */
   async function loadProducts(){
     loader(true);
     try{
@@ -420,8 +420,8 @@ img{max-width:100%;display:block}a{text-decoration:none}
       renderSidebars();
       populateSelect();
       applyFilters();
-      toast('&#x2705; '+allProducts.length+' products loaded');
-    }catch(e){toast('&#x274C; Failed to load products',true);allProducts=[];applyFilters();}
+      toast('✅ '+allProducts.length+' | Some Pricing Was Null - contact uS');
+    }catch(e){toast('❌ Please Check Your Network',true);allProducts=[];applyFilters();}
     finally{loader(false)}
   }
 
@@ -540,7 +540,7 @@ img{max-width:100%;display:block}a{text-decoration:none}
             <button class="btn-order${inW?' wishlisted':''}"
               data-code="${esc(p.code)}" data-name="${esc(p.name)}"
               data-price="${p.price||0}" data-img="${esc(p.imageUrl||'')}">
-              ${inW?'&#x2764;&#xFE0F; Wishlisted':'&#x1F6D2; Order Now'}
+              ${inW?'♥️ Wishlisted':'&#x1F6D2; Order Now'}
             </button>
           </div>
         </div>
@@ -554,7 +554,7 @@ img{max-width:100%;display:block}a{text-decoration:none}
         const item={code:btn.dataset.code,name:btn.dataset.name,price:parseFloat(btn.dataset.price),imageUrl:btn.dataset.img};
         toggleWishlist(item);
         const inW=wishlist.some(w=>w.code===item.code);
-        btn.innerHTML=inW?'&#x2764;&#xFE0F; Wishlisted':'&#x1F6D2; Order Now';
+        btn.innerHTML=inW?'♥️ Wishlisted':'&#x1F6D2; Order Now';
         inW?btn.classList.add('wishlisted'):btn.classList.remove('wishlisted');
       };
     });
@@ -582,10 +582,10 @@ img{max-width:100%;display:block}a{text-decoration:none}
   function toggleWishlist(item){
     if(wishlist.some(w=>w.code===item.code)){
       wishlist=wishlist.filter(w=>w.code!==item.code);
-      toast('&#x274C; '+item.name+' removed from wishlist');
+      toast('❌ '+item.name+' removed from wishlist');
     }else{
       wishlist.push({...item});
-      toast('&#x2764;&#xFE0F; '+item.name+' added to wishlist');
+      toast('♥️ '+item.name+' added to wishlist');
     }
     localStorage.setItem('berkah_wishlist',JSON.stringify(wishlist));
     document.getElementById('wishlistCount').innerText=wishlist.length;
